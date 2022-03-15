@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "YAML-Config-Loader"
+version = "1.0.0"
+description = "This is a small module you can use to use yaml config files"
+license = "MIT"
+authors = ["tooboredtocode <bored-coder@tooboredtocode.dev>"]
+readme = "README.md"
+homepage = "https://github.com/tooboredtocode/yaml-config"
+repository = "https://github.com/tooboredtocode/yaml-config"
+keywords = ["yaml", "config"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+    "Intended Audience :: Developers"
+]
+packages = [
+    { include = "yaml_config" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+PyYAML = "^6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
