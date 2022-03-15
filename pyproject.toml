@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "YAML-Config-Loader"
-version = "1.0.0"
+version = "1.0.1"
 description = "This is a small module you can use to use yaml config files"
 license = "MIT"
 authors = ["tooboredtocode <bored-coder@tooboredtocode.dev>"]

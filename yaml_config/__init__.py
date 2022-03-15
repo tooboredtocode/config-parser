@@ -110,7 +110,7 @@ class Config:
                         except ValueError:
                             if try_ == len(types) - 1:
                                 raise
-                if typing.get_origin(type_) is list:
+                elif typing.get_origin(type_) is list:
                     ls = []
                     type__ = typing.get_args(type_)[0]
 
