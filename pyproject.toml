@@ -1,27 +1,30 @@
 [tool.poetry]
-name = "YAML-Config-Loader"
-version = "1.0.1"
-description = "This is a small module you can use to use yaml config files"
+name = "bored-config-parser"
+version = "0.1.0"
+description = "This is a small module you can use to make using config files easy"
 license = "MIT"
 authors = ["tooboredtocode <bored-coder@tooboredtocode.dev>"]
 readme = "README.md"
-homepage = "https://github.com/tooboredtocode/yaml-config"
-repository = "https://github.com/tooboredtocode/yaml-config"
-keywords = ["yaml", "config"]
+homepage = "https://github.com/tooboredtocode/config-parser"
+repository = "https://github.com/tooboredtocode/config-parser"
+keywords = ["yaml", "json", "config"]
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
+    "Development Status :: 4 - Beta",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Topic :: Utilities",
     "Intended Audience :: Developers"
 ]
 packages = [
-    { include = "yaml_config" }
+    { include = "config_parser" }
 ]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-PyYAML = "^6.0"
+PyYAML = { version="^6.0", optional=true }
+
+[tool.poetry.extras]
+yaml = ["PyYAML"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

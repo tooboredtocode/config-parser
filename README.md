@@ -1,6 +1,6 @@
-# Yaml Config
+# Bored Config Parser
 
-This is a small module you can use to use yaml config files
+This is a small module you can use to make using config files easy
 
 ### Example
 
@@ -19,22 +19,29 @@ targets:
 
 can be easily used with the following code:
 ```python
-from yaml_config import Config
+from typing import List
 
-config = Config("path/to/config.yaml")
+from config_parser import load_config
 
-@config.config("general")
+
 class General:
     name: str
     frequency: int
 
-@config.list_config("targets")
-class Targets:
+
+class Target:
     name: str
     size: str
 
-print(General.name)
+    
+@load_config("path/to/config.yaml")
+class Config:
+    general: General
+    targets: List[Target]
 
-for target in Targets:
+
+print(Config.general.name)
+
+for target in Config.targets:
     print(target.name)
 ```

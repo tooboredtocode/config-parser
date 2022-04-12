@@ -3,13 +3,16 @@ name = "pyyaml"
 version = "6.0"
 description = "YAML parser and emitter for Python"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.6"
+
+[extras]
+yaml = ["PyYAML"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.9"
-content-hash = "17c69a2b0b813c0735f39ac23a717ab42af47b95485d5f1826d8031567542ac0"
+python-versions = "^3.8"
+content-hash = "fc46c8266a997c1942044b17f97d42e63050961654ef0261926fd555d3829b08"
 
 [metadata.files]
 pyyaml = [
