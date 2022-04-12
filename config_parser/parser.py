@@ -51,7 +51,7 @@ class Parser:
     def populate_attributes(source: ParsedValue, to_type: T, key: str, env_tag: str) -> T:
         if to_type in [str, int, float]:
             if (
-                isinstance(source, str) &
+                isinstance(source, str) and
                 source.startswith("!ENV")
             ):
                 tag, flag, *extra = source.split(" ")

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bored-config-parser"
-version = "0.1.0"
+version = "0.1.1"
 description = "This is a small module you can use to make using config files easy"
 license = "MIT"
 authors = ["tooboredtocode <bored-coder@tooboredtocode.dev>"]
